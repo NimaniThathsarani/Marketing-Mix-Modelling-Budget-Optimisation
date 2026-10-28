@@ -132,28 +132,20 @@ The model accounts for advertising carryover, diminishing returns, time delays, 
 
 <h2 align="center">Technology Stack</h2>
 
-### Data Processing
-
-- Python
-- Pandas
-- NumPy
-
-### Modelling & Statistics
-
-- Scikit-learn
-- Statsmodels
-- SciPy
-
-### Visualisation & Business Intelligence
-
-- Matplotlib
-- Seaborn
-- Power BI
-
-### Working Environment
-
-- Jupyter Notebook
-- Git and GitHub
+| Category | Technology | Purpose |
+|---|---|---|
+| **Data Processing** | Python | Core programming language for the analytical workflow |
+| **Data Processing** | Pandas | Data cleaning, transformation, and tabular analysis |
+| **Data Processing** | NumPy | Numerical operations and array-based calculations |
+| **Modelling & Statistics** | Scikit-learn | Regression modelling, preprocessing, and model evaluation |
+| **Modelling & Statistics** | Statsmodels | Statistical modelling, inference, and diagnostics |
+| **Modelling & Statistics** | SciPy | Constrained budget optimisation and scientific computing |
+| **Visualisation & Business Intelligence** | Matplotlib | Static analytical charts and model visualisations |
+| **Visualisation & Business Intelligence** | Seaborn | Statistical visualisation and exploratory analysis |
+| **Visualisation & Business Intelligence** | Power BI | Interactive dashboard and business reporting |
+| **Working Environment** | Jupyter Notebook | Interactive analysis, experimentation, and documentation |
+| **Working Environment** | Git | Source control and change tracking |
+| **Working Environment** | GitHub | Repository hosting and project collaboration |
 
 ---
 
