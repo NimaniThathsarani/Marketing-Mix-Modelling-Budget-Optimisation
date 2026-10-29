@@ -1,0 +1,127 @@
+{
+  "dataset": "Dataset.xlsx, sheet MMM_Data",
+  "period": [
+    "2023-01-01",
+    "2025-12-01"
+  ],
+  "frequency": "monthly",
+  "rows_raw": 36,
+  "rows_clean": 36,
+  "columns_raw": 25,
+  "columns_clean": 22,
+  "duplicates_removed": 0,
+  "missing_values_found": {},
+  "total_spend_rows_adjusted": 16,
+  "outlier_flags": 6,
+  "months_with_outlier_flag": 6,
+  "constant_columns_dropped": [
+    "country",
+    "brand_category",
+    "region_scope",
+    "data_type"
+  ],
+  "checks_passed": 16,
+  "checks_total": 16,
+  "checks": {
+    "no_missing_values": {
+      "passed": true,
+      "detail": "0 missing cells"
+    },
+    "no_duplicate_rows": {
+      "passed": true,
+      "detail": "0 duplicate rows"
+    },
+    "unique_months": {
+      "passed": true,
+      "detail": ""
+    },
+    "sorted_by_month": {
+      "passed": true,
+      "detail": ""
+    },
+    "month_start_dates": {
+      "passed": true,
+      "detail": ""
+    },
+    "no_missing_months": {
+      "passed": true,
+      "detail": "expected 36, found 36"
+    },
+    "spend_non_negative": {
+      "passed": true,
+      "detail": ""
+    },
+    "revenue_positive": {
+      "passed": true,
+      "detail": ""
+    },
+    "total_equals_channel_sum": {
+      "passed": true,
+      "detail": ""
+    },
+    "clicks_not_above_impressions": {
+      "passed": true,
+      "detail": ""
+    },
+    "conversions_not_above_clicks": {
+      "passed": true,
+      "detail": ""
+    },
+    "promotion_pct_in_0_100": {
+      "passed": true,
+      "detail": ""
+    },
+    "competitor_pressure_index_0_100_in_0_100": {
+      "passed": true,
+      "detail": ""
+    },
+    "economic_sentiment_index_0_100_in_0_100": {
+      "passed": true,
+      "detail": ""
+    },
+    "holiday_count_0_to_31": {
+      "passed": true,
+      "detail": ""
+    },
+    "finite_numeric_values": {
+      "passed": true,
+      "detail": ""
+    }
+  },
+  "feature_checks_passed": 8,
+  "feature_checks_total": 8,
+  "feature_checks": {
+    "channel_shares_sum_to_one": {
+      "passed": true,
+      "detail": ""
+    },
+    "lags_use_earlier_months_only": {
+      "passed": true,
+      "detail": ""
+    },
+    "flags_are_binary": {
+      "passed": true,
+      "detail": ""
+    },
+    "no_infinite_values": {
+      "passed": true,
+      "detail": ""
+    },
+    "missing_values_only_where_expected": {
+      "passed": true,
+      "detail": "spend_rolling3_mean, tv_spend_lag1, facebook_instagram_spend_lag1, google_search_spend_lag1, youtube_spend_lag1, radio_spend_lag1, outdoor_spend_lag1, tv_spend_lag2, facebook_instagram_spend_lag2, google_search_spend_lag2, youtube_spend_lag2, radio_spend_lag2, outdoor_spend_lag2, fx_mom_change_pct, revenue_mom_growth_pct"
+    },
+    "train_before_test": {
+      "passed": true,
+      "detail": ""
+    },
+    "train_and_test_cover_all_rows": {
+      "passed": true,
+      "detail": ""
+    },
+    "train_test_no_shared_months": {
+      "passed": true,
+      "detail": ""
+    }
+  }
+}
