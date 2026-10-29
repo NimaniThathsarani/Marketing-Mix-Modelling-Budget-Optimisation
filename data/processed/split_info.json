@@ -1,0 +1,39 @@
+{
+  "split_type": "chronological, no shuffling",
+  "train_rows": 30,
+  "train_start": "2023-01-01",
+  "train_end": "2025-06-01",
+  "test_rows": 6,
+  "test_start": "2025-07-01",
+  "test_end": "2025-12-01",
+  "walk_forward_folds": [
+    {
+      "fold": 1,
+      "train_rows": 18,
+      "train_end": "2024-06-01",
+      "validation_start": "2024-07-01",
+      "validation_end": "2024-09-01"
+    },
+    {
+      "fold": 2,
+      "train_rows": 21,
+      "train_end": "2024-09-01",
+      "validation_start": "2024-10-01",
+      "validation_end": "2024-12-01"
+    },
+    {
+      "fold": 3,
+      "train_rows": 24,
+      "train_end": "2024-12-01",
+      "validation_start": "2025-01-01",
+      "validation_end": "2025-03-01"
+    },
+    {
+      "fold": 4,
+      "train_rows": 27,
+      "train_end": "2025-03-01",
+      "validation_start": "2025-04-01",
+      "validation_end": "2025-06-01"
+    }
+  ]
+}
