@@ -1,0 +1,82 @@
+{
+  "model": "adstock + hill saturation MMM",
+  "target": "sales_revenue_lkr",
+  "use_adstock": true,
+  "use_saturation": true,
+  "channels": [
+    "tv_spend_lkr",
+    "facebook_instagram_spend_lkr",
+    "google_search_spend_lkr",
+    "youtube_spend_lkr",
+    "radio_spend_lkr",
+    "outdoor_spend_lkr"
+  ],
+  "controls": [
+    "promotion_discount_pct",
+    "seasonal_demand_index",
+    "competitor_pressure_index_0_100",
+    "economic_sentiment_index_0_100",
+    "average_price_index"
+  ],
+  "intercept": 36682137.554470144,
+  "coef": {
+    "tv_spend_lkr": 9393549.332319656,
+    "facebook_instagram_spend_lkr": 5689591.386306111,
+    "google_search_spend_lkr": 23393352.397047453,
+    "youtube_spend_lkr": 14353256.594897827,
+    "radio_spend_lkr": 0.0,
+    "outdoor_spend_lkr": 25064748.251877382,
+    "promotion_discount_pct": 2193918.6535567767,
+    "seasonal_demand_index": 1963395.19428514,
+    "competitor_pressure_index_0_100": -775408.4768793812,
+    "economic_sentiment_index_0_100": 549007.1439876796,
+    "average_price_index": 591527.023511255
+  },
+  "lam": {
+    "tv_spend_lkr": 0.3024736590846381,
+    "facebook_instagram_spend_lkr": 0.07583708253163174,
+    "google_search_spend_lkr": 9.728526224286882e-05,
+    "youtube_spend_lkr": 0.11074741899433604,
+    "radio_spend_lkr": 0.2238264952984818,
+    "outdoor_spend_lkr": 0.375724825693286
+  },
+  "K": {
+    "tv_spend_lkr": 1.1143521533268936,
+    "facebook_instagram_spend_lkr": 1.414659213885916,
+    "google_search_spend_lkr": 0.5219839206954302,
+    "youtube_spend_lkr": 0.5002610225464473,
+    "radio_spend_lkr": 0.5755082291527818,
+    "outdoor_spend_lkr": 0.5068565862662345
+  },
+  "alpha": {
+    "tv_spend_lkr": 1.0,
+    "facebook_instagram_spend_lkr": 1.0,
+    "google_search_spend_lkr": 1.0,
+    "youtube_spend_lkr": 1.0,
+    "radio_spend_lkr": 1.0,
+    "outdoor_spend_lkr": 1.0
+  },
+  "scale": {
+    "tv_spend_lkr": 4318787.133333334,
+    "facebook_instagram_spend_lkr": 4332367.633333334,
+    "google_search_spend_lkr": 3285575.8333333335,
+    "youtube_spend_lkr": 2174052.8,
+    "radio_spend_lkr": 1634229.3,
+    "outdoor_spend_lkr": 2564649.5
+  },
+  "ctrl_mean": {
+    "promotion_discount_pct": 11.768,
+    "seasonal_demand_index": 1.0466666666666666,
+    "competitor_pressure_index_0_100": 47.69000000000001,
+    "economic_sentiment_index_0_100": 49.26333333333333,
+    "average_price_index": 1.0870333333333333
+  },
+  "ctrl_std": {
+    "promotion_discount_pct": 6.136332455139633,
+    "seasonal_demand_index": 0.08688434202368624,
+    "competitor_pressure_index_0_100": 10.352048106534282,
+    "economic_sentiment_index_0_100": 12.930828365662512,
+    "average_price_index": 0.05256074792297217
+  },
+  "ridge": 0.7764951799823102
+}
