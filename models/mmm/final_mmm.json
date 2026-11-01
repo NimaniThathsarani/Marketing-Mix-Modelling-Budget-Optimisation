@@ -18,19 +18,19 @@
     "economic_sentiment_index_0_100",
     "average_price_index"
   ],
-  "intercept": 38886029.088016376,
+  "intercept": 38886029.08801639,
   "coef": {
-    "tv_spend_lkr": 9113820.064064218,
-    "facebook_instagram_spend_lkr": 7664229.553241115,
-    "google_search_spend_lkr": 20799817.810533207,
-    "youtube_spend_lkr": 13994410.08717632,
+    "tv_spend_lkr": 9113820.064064233,
+    "facebook_instagram_spend_lkr": 7664229.553241103,
+    "google_search_spend_lkr": 20799817.81053322,
+    "youtube_spend_lkr": 13994410.087176325,
     "radio_spend_lkr": 0.0,
-    "outdoor_spend_lkr": 24360356.466696095,
-    "promotion_discount_pct": 2063338.925802606,
-    "seasonal_demand_index": 1896257.520840547,
-    "competitor_pressure_index_0_100": -847394.6326811223,
-    "economic_sentiment_index_0_100": 513688.17370152776,
-    "average_price_index": 647346.8302098296
+    "outdoor_spend_lkr": 24360356.466696046,
+    "promotion_discount_pct": 2063338.9258026043,
+    "seasonal_demand_index": 1896257.5208405473,
+    "competitor_pressure_index_0_100": -847394.6326811236,
+    "economic_sentiment_index_0_100": 513688.173701527,
+    "average_price_index": 647346.8302098304
   },
   "lam": {
     "tv_spend_lkr": 0.3024736590846381,
@@ -83,12 +83,12 @@
   "fit_period": "2023-01 to 2025-12",
   "hyperparameters_tuned_on": "2023-01 to 2025-06 (rolling-origin CV)",
   "holdout_metrics": {
-    "train R2": 0.7093102958120706,
-    "CV RMSE": 2956122.8691038596,
-    "test RMSE": 1749566.3829663338,
-    "test MAE": 1562504.2607153256,
-    "test MAPE_%": 1.7689082584553335,
-    "test R2": 0.8873593430244077
+    "train R2": 0.7093102958120703,
+    "CV RMSE": 2956122.869103861,
+    "test RMSE": 1749566.3829663463,
+    "test MAE": 1562504.2607153382,
+    "test MAPE_%": 1.7689082584553466,
+    "test R2": 0.887359343024406
   },
   "current_monthly_spend": {
     "tv_spend_lkr": 4711485.166666667,

@@ -18,19 +18,19 @@
     "economic_sentiment_index_0_100",
     "average_price_index"
   ],
-  "intercept": 36682137.55447012,
+  "intercept": 36682137.554470144,
   "coef": {
-    "tv_spend_lkr": 9393549.33231966,
-    "facebook_instagram_spend_lkr": 5689591.38630608,
-    "google_search_spend_lkr": 23393352.397047464,
-    "youtube_spend_lkr": 14353256.59489785,
+    "tv_spend_lkr": 9393549.332319656,
+    "facebook_instagram_spend_lkr": 5689591.386306111,
+    "google_search_spend_lkr": 23393352.397047453,
+    "youtube_spend_lkr": 14353256.594897827,
     "radio_spend_lkr": 0.0,
-    "outdoor_spend_lkr": 25064748.251877405,
-    "promotion_discount_pct": 2193918.6535567795,
-    "seasonal_demand_index": 1963395.1942851413,
-    "competitor_pressure_index_0_100": -775408.4768793845,
-    "economic_sentiment_index_0_100": 549007.1439876776,
-    "average_price_index": 591527.0235112571
+    "outdoor_spend_lkr": 25064748.251877382,
+    "promotion_discount_pct": 2193918.6535567767,
+    "seasonal_demand_index": 1963395.19428514,
+    "competitor_pressure_index_0_100": -775408.4768793812,
+    "economic_sentiment_index_0_100": 549007.1439876796,
+    "average_price_index": 591527.023511255
   },
   "lam": {
     "tv_spend_lkr": 0.3024736590846381,
