@@ -1,0 +1,7 @@
+channel,roas,marginal_roas_at_current,prob_roas_gt_1,prob_effect_zero,suggested_action,evidence_and_reason
+Outdoor,6.122042193754247,1.9128072272332264,0.99,0.003,Consider gradual testing of additional spend,"Average and marginal revenue returns are above 1, with relatively strong bootstrap support. Increase in controlled steps and monitor."
+YouTube,4.16693158753618,1.1576687738672662,0.895,0.048,Consider gradual testing of additional spend,"Average and marginal revenue returns are above 1, with relatively strong bootstrap support. Increase in controlled steps and monitor."
+Google Search,4.080228122019072,1.2661633554686538,0.854,0.032,Consider gradual testing of additional spend,"Average and marginal revenue returns are above 1, with relatively strong bootstrap support. Increase in controlled steps and monitor."
+TV,0.9816956110888264,0.4834814809864812,0.461,0.099,Review and consider reducing or reallocating spend,Both average and next-LKR revenue returns are below 1. Validate business objectives and uncertainty before reducing.
+Facebook/Instagram,0.7168772792420062,0.4116726861265145,0.605,0.085,Review and consider reducing or reallocating spend,Both average and next-LKR revenue returns are below 1. Validate business objectives and uncertainty before reducing.
+Radio,0.0,0.0,0.552,0.352,Investigate before reallocating,"The bootstrap assigns meaningful probability to a zero effect; check data quality, channel activity and model uncertainty."
