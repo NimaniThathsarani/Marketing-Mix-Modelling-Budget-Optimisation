@@ -1,41 +1,10 @@
 # Marketing Mix Modelling Report
 
-Code: `src/mmm_core.py`, `src/mmm_response.py`.
+Code: `src/mmm_core.py`, `src/mmm_response.py`. Notebooks: `notebooks/06_mmm_baseline_and_controls.ipynb`, `notebooks/07_mmm_training_and_evaluation.ipynb`, `notebooks/08_mmm_contributions_and_response_curves.ipynb`, `notebooks/09_mmm_alternative_model.ipynb`.
+Input: `data/processed/mmm_analysis_ready.csv` and `data/processed/split_info.json` (Team 1).
+Outputs: `models/mmm/`, `outputs/mmm/`, figures `reports/figures/06_*` to `09_*`. Tests: `tests/test_mmm_core.py`.
 
-Notebooks:
-`notebooks/06_mmm_baseline_and_controls.ipynb`,
-`notebooks/07_mmm_training_and_evaluation.ipynb`,
-`notebooks/08_mmm_contributions_and_response_curves.ipynb`,
-`notebooks/09_mmm_alternative_model.ipynb`.
-
-Input:
-`data/processed/mmm_analysis_ready.csv`
-and
-`data/processed/split_info.json`.
-
-Outputs:
-`models/mmm/`,
-`outputs/mmm/`,
-figures
-`reports/figures/06_*`,
-`07_*`,
-`08_*`,
-`09_*`.
-
-Tests:
-`tests/test_mmm_core.py`.
-
-Target:
-`sales_revenue_lkr`
-(monthly revenue, LKR).
-
-Train:
-2023-01 to 2025-06 (30 months)
-
-Test:
-2025-07 to 2025-12 (6 months)
-
-as defined in `split_info.json`.
+Target: `sales_revenue_lkr` (monthly revenue, LKR). Train 2023-01 to 2025-06 (30 months), test 2025-07 to 2025-12 (6 months), as defined in `split_info.json`.
 
 ---
 
@@ -147,8 +116,9 @@ These procedures help ensure that the reported channel effects are not dependent
 
 ### Reliability Checks
 
-- **Residual diagnostics:** Durbin-Watson 1.76, Ljung-Box p = 0.29, Shapiro-Wilk p = 0.13, Breusch-Pagan p = 0.23.
-- **Search stability:** Multiple random seeds produced nearly identical solutions and similar ROAS estimates.
+- **Residual diagnostics:** Durbin-Watson 1.76, Ljung-Box p = 0.29, Shapiro-Wilk p = 0.13, Breusch-Pagan p = 0.23. There is no evidence of autocorrelation, non-normality or heteroscedasticity in the residuals.
+- **Search stability:** Three random seeds gave the same CV error (2.96 m) and similar channel ROAS.
+- **Reproducibility:** Notebook 07 was re-run on a second machine (Windows) and reproduced the same model; all parameters matched to floating-point precision.
 - **Bootstrap:** 1,000 moving-block bootstrap samples (3-month blocks) were used to estimate uncertainty intervals.
 
 ---
@@ -208,49 +178,33 @@ Lagged spending provides a simple approximation of carry-over effects.
 
 ## Alternative Model Findings
 
-Both alternative specifications broadly support the conclusions of the final MMM.
+### Why M3a remains the final model
 
-Consistent findings:
+Model B has the best test score of all models (test R² 0.95, MAPE 1.13%), but it is not selected:
 
-- Google Search remains a high-performing channel.
-- YouTube remains one of the strongest digital channels.
-- Outdoor consistently shows strong effectiveness.
-- Radio remains the weakest channel.
+- **The model was chosen by cross-validation, not by the test set.** Model B has the worst CV RMSE of the non-baseline models (3.85 m vs 2.96 m for M3a), so its validation error across 10 time-ordered folds is about 30% higher than M3a's.
+- **The test set is only 6 months.** A single good 6-month window can happen by chance; choosing the model on it would be overfitting to the test set.
+- **Model B is less reliable for attribution.** It estimates 17 coefficients from 29 months without constraints and gives Radio a negative effect, which is not plausible.
+- **M3a provides what the next teams need:** non-negative channel effects and smooth response curves for ROI analysis and budget optimisation.
 
-Model A channel ranking:
+**M3a stays the final model for all hand-offs.**
 
-1. Google Search
-2. YouTube
-3. Outdoor
-4. TV
-5. Facebook/Instagram
-6. Radio
+### Channel ranking across methods
 
-Model B channel ranking:
+| Rank | M3a (ROAS) | Model A (log Ridge) | Model B (lag Ridge) |
+|---|---|---|---|
+| 1 | Outdoor | Google Search | Google Search |
+| 2 | YouTube | YouTube | Facebook/Instagram |
+| 3 | Google Search | Outdoor | YouTube |
+| 4 | TV | TV | Outdoor |
+| 5 | Facebook/Instagram | Facebook/Instagram | TV |
+| 6 | Radio | Radio | Radio |
 
-1. Google Search
-2. Facebook/Instagram
-3. YouTube
-4. Outdoor
-5. TV
-6. Radio
+- **Consistent across all three methods:** Google Search and YouTube are strong channels (top 3 in every model), and Radio is the weakest.
+- **Method-dependent:** Outdoor ranks 1st in M3a but 3rd–4th in the Ridge models, and Facebook/Instagram ranks 2nd in Model B but 5th in the other two. Conclusions about these two channels should be treated with more caution.
+- Both Ridge models gave Radio a negative coefficient. Unconstrained regression can produce implausible negative effects from noise and correlated channels, which supports M3a's non-negative constraint.
 
-The final MMM ROAS ranking was:
-
-1. Outdoor
-2. YouTube
-3. Google Search
-4. TV
-5. Facebook/Instagram
-6. Radio
-
-Although exact rankings differ across methods, the strongest and weakest channels remain broadly consistent.
-
-Both benchmark models assigned negative coefficients to Radio.
-
-This behaviour is a limitation of unconstrained regression models and reinforces the final MMM design choice of enforcing non-negative media coefficients.
-
-Overall, the alternative modelling exercise increases confidence that the main strategic conclusions are robust across modelling approaches.
+Overall, the alternative models confirm the robust findings (Search and YouTube strong, Radio weak) and show which channel conclusions depend on the modelling method.
 
 ---
 
@@ -270,6 +224,13 @@ ROAS = incremental revenue ÷ spend.
 Marginal ROAS = revenue generated by the next LKR spent at the current average monthly spend level.
 
 Media contributes approximately 54% of total revenue, producing an overall media ROAS of 2.49.
+
+Key findings:
+
+- Outdoor, YouTube and Google Search receive 44% of the spend but deliver 84% of the media effect. TV and Facebook/Instagram receive 47% of the spend and deliver 16%.
+- Carryover is short for every channel (half-life under one month), which fits monthly FMCG data.
+- Every channel is already past the steep part of its response curve, so extra spend still adds revenue, but less each time. Budget should move from channels with low marginal ROAS to channels with high marginal ROAS until the marginal ROAS values are about equal. This is Team 4's optimisation.
+- Illustration: moving 1.83 m LKR a month from Radio to Outdoor, with the total budget unchanged, adds about 2.4 m LKR of revenue a month.
 
 ---
 
@@ -300,13 +261,17 @@ Media contributes approximately 54% of total revenue, producing an overall media
 
 ---
 
-Using the response functions:
+Using the response functions (from the project root):
 
 ```python
 from src.mmm_response import ResponseModel
 
 rm = ResponseModel()
+rm.current_spend          # 2025 average monthly spend per channel
+rm.total_revenue(spend)   # incremental revenue per month for {channel: spend}
+rm.gradient(spend)        # marginal ROAS per channel (jacobian for SLSQP)
+```
 
-rm.current_spend
-rm.total_revenue(spend)
-rm.gradient(spend)
+The response curves are concave, so `scipy.optimize.minimize(lambda x: -total, method="SLSQP")` with a budget equality constraint and per-channel bounds has a single optimum.
+
+Requirements: `pandas numpy scipy statsmodels scikit-learn matplotlib joblib`. Notebook 07 takes about 10–15 minutes (hyperparameter search); notebook 09 runs in under a minute. `build_mmm_notebooks.py` regenerates notebooks 06–08 from source.
