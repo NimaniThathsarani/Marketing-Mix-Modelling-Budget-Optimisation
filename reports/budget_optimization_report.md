@@ -2,7 +2,7 @@
 
 **Source model:** `models/mmm/final_mmm.json`, used via `src/mmm_response.py`.  
 **Historical data:** `data/processed/mmm_analysis_ready.csv` (January 2023–December 2025; 36 observations).  
-**Code:** `src/budget_optimization.py` and `notebooks/10_budget_optimization.ipynb`.  
+**Code:** `src/budget_optimization.py` and `notebooks/11_budget_optimization.ipynb`.  
 **Currency and frequency:** LKR per month.
 
 ## 1. Executive summary
