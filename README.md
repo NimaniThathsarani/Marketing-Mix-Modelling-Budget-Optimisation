@@ -13,7 +13,7 @@
   <img src="https://img.shields.io/badge/Scikit--learn-Modelling-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="Scikit-learn" />
   <img src="https://img.shields.io/badge/SciPy-Optimisation-8CAAE6?style=flat-square&logo=scipy&logoColor=white" alt="SciPy" />
   <img src="https://img.shields.io/badge/Statsmodels-Statistics-4051B5?style=flat-square" alt="Statsmodels" />
-  <img src="https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=flat-square&logo=powerbi&logoColor=black" alt="Power BI" />
+  <img src="https://img.shields.io/badge/Tableau-Dashboard-5b7fa6?style=flat-square&logo=tableau&logoColor=white" alt="Tableau" />
 </p>
 
 </div>
@@ -126,7 +126,7 @@ The model accounts for advertising carryover, diminishing returns, time delays, 
 - Compare baseline and advanced regression-based MMM approaches.
 - Evaluate channel effectiveness using contribution, ROI, and ROAS.
 - Optimise a fixed advertising budget under realistic constraints.
-- Present findings through Power BI and a professional final report.
+- Present findings through Tableau and a professional final report.
 
 ---
 
@@ -142,7 +142,7 @@ The model accounts for advertising carryover, diminishing returns, time delays, 
 | **Modelling & Statistics** | SciPy | Constrained budget optimisation and scientific computing |
 | **Visualisation & Business Intelligence** | Matplotlib | Static analytical charts and model visualisations |
 | **Visualisation & Business Intelligence** | Seaborn | Statistical visualisation and exploratory analysis |
-| **Visualisation & Business Intelligence** | Power BI | Interactive dashboard and business reporting |
+| **Visualisation & Business Intelligence** | Tableau | Interactive dashboard and business reporting |
 | **Working Environment** | Jupyter Notebook | Interactive analysis, experimentation, and documentation |
 | **Working Environment** | Git | Source control and change tracking |
 | **Working Environment** | GitHub | Repository hosting and project collaboration |
@@ -175,7 +175,7 @@ Provided Marketing Dataset
           |                      Constraints · Scenarios
           |------------------------------|
                          v
-                Power BI Dashboard
+                Tableau Dashboard
                          |
                          v
             Final Report & Recommendations
@@ -203,7 +203,7 @@ A constrained SciPy optimisation model uses the estimated response functions to 
 
 ### Dashboard & Visualisation
 
-The Power BI dashboard combines KPIs, sales and spending trends, channel contributions, ROI/ROAS comparisons, response curves, and budget scenarios in an interactive business-facing view.
+The Tableau dashboard combines KPIs, sales and spending trends, channel contributions, ROI/ROAS comparisons, response curves, and budget scenarios in an interactive business-facing view.
 
 ### Reporting & Recommendations
 
@@ -219,7 +219,7 @@ The final analysis consolidates the methodology, model evaluation, channel findi
 | Marketing Mix Modelling | Validated data and features | Model estimates, channel contributions, response functions |
 | Channel Effectiveness | Validated MMM outputs | ROI/ROAS analysis, rankings, response insights |
 | Budget Optimisation | Response functions and constraints | Optimised allocations and scenario comparisons |
-| Dashboard | Approved analytical outputs | Interactive Power BI views |
+| Dashboard | Approved analytical outputs | Interactive Tableau views |
 | Reporting | Methods, results, visuals, and limitations | Final recommendations and project documentation |
 
 ---
@@ -301,7 +301,7 @@ Where profit margins or incremental revenue cannot be estimated reliably, the li
 | Marketing Mix Model | Evaluated model with adstock, saturation, controls, and channel contributions |
 | Channel effectiveness analysis | ROI/ROAS comparisons, efficiency rankings, and recommendations |
 | Budget optimisation algorithm | Constrained allocation model with current-versus-optimised scenarios |
-| Interactive dashboard | Power BI report integrating validated project outputs |
+| Interactive dashboard | Tableau workbook integrating validated project outputs |
 | Final report | Methodology, findings, limitations, references, and recommendations |
 
 ---
